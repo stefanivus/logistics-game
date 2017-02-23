@@ -8,7 +8,6 @@
 
         // Initialize Environment
         this.round = 1;
-
     }
     //Game.prototype.FUNCTIONNAME = function FUNCTIONNAME() {}
 
@@ -17,18 +16,18 @@
             console.log("GAME OVER");
         } else {
             this.round++;
-            this.company.budget = this.company.budget - this.company.dailyExpense();
+            this.company.budget = this.budgetAfterRound();
         }
     }
 
-    Game.prototype.isAlive = function isAlive() {
-        return this.company.budget > -100000;
+    // NOTE GO CLIENT BY CLIENT AND DECREASE BASED ON SHIPMENTS
+    Game.prototype.budgetAfterRound = function budgetAfterRound() {
+        return this.company.budget - this.company.dailyExpense();
     }
 
+    Game.prototype.isAlive = function isAlive() {
+        return this.budgetAfterRound() > -100000;
+    }
 
-
-    // Test
-    var g = new Game();
-    console.log(g.company.budget);
-    //module.exports = Game;
+    module.exports = Game;
 })();

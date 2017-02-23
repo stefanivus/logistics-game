@@ -19,7 +19,7 @@
         // Set Company Variables
         this.vehicles = [];
         this.clients = [];
-        
+        this.plannedShipments = []; // priority queue
     }
 
     /* The amount of money spent on X per day.
@@ -30,7 +30,7 @@
     */
     Company.prototype.dailyExpense = function dailyExpense() {
         // Note: Later, charge different amounts for different vehicles
-        return ((8 * this.employees.length) +
+        return ((8 * this.employees.length + 1) +
                 (15 * this.vehicles.length));
     }
 
