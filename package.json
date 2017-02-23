@@ -1,0 +1,25 @@
+{
+  "name": "logistics-game",
+  "version": "1.0.0",
+  "description": "Logistics! The fun game where you manage everything!\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jchang4/logistics-game.git"
+  },
+  "author": "Justin Chang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jchang4/logistics-game/issues"
+  },
+  "homepage": "https://github.com/Jchang4/logistics-game#readme",
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "express": "^4.14.1"
+  }
+}
