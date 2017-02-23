@@ -52,6 +52,11 @@
                 });
                 g.nextRound();
             }
+
+            g.company.budget = -100000;
+            it('should return false. Game over.', () => {
+                assert.equal(false, g.nextRound());
+            });
         });
 
         describe('#budgetAfterRound()', () => {
@@ -70,11 +75,3 @@
     });
 
 })();
-
-// Test
-// var g = new Game();
-// console.log("budget:", g.company.budget);
-// while (g.isAlive()) {
-//     console.log("\nbudget:", g.company.budget);
-//     g.nextRound();
-// }

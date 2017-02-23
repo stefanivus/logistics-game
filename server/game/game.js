@@ -20,9 +20,8 @@
     //Game.prototype.FUNCTIONNAME = function FUNCTIONNAME() {}
 
     Game.prototype.nextRound = function nextRound() {
-        if (!this.isAlive()) {
-            console.log("GAME OVER");
-        } else {
+        if (!this.isAlive()) return false; // GAME OVER
+        else {
             this.round++;
             this.company.budget = this.budgetAfterRound();
         }
