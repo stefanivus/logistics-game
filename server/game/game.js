@@ -6,6 +6,14 @@
     function Game(companyName, budget/*, numStartingEmployees, numStartingClients*/) {
         this.company = new Company(companyName, budget);
 
+
+        // -------------------------------------
+        // NOTE Remove later. Used to end loop.
+        this.company.employees = [1];
+        // -------------------------------------
+
+
+
         // Initialize Environment
         this.round = 1;
     }

@@ -20,6 +20,9 @@
         this.vehicles = [];
         this.clients = [];
         this.plannedShipments = []; // priority queue
+
+        // Constant Variables
+        this.WAGE = 8;
     }
 
     /* The amount of money spent on X per day.
@@ -29,8 +32,8 @@
            vehicles          $15/hr
     */
     Company.prototype.dailyExpense = function dailyExpense() {
-        // Note: Later, charge different amounts for different vehicles
-        return ((8 * this.employees.length + 1) +
+        // NOTE: Later, charge different amounts for different vehicles
+        return ((this.WAGE * this.employees.length) +
                 (15 * this.vehicles.length));
     }
 

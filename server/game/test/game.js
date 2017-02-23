@@ -45,19 +45,27 @@
             var g = new Game();
             g.company.budget = 99999999; // make sure we have enough money
 
-            it('should start at round 1', () => {
-                assert.equal(1, g.round);
-            });
-
-            it('should increment round. round 2', () => {
+            for (let i = 1; i <= 10; i++) {
+                let currRound = g.round;
+                it('should increment round. round = ' + i, () => {
+                    assert.equal(i, currRound);
+                });
                 g.nextRound();
-                assert.equal(2, g.round);
-            });
+            }
+        });
 
-            it('should increment round. round 3', () => {
-                g.nextRound();
-                assert.equal(3, g.round);
-            });
+        describe('#budgetAfterRound()', () => {
+            var g = new Game();
+            // 10 iterations with 1 employee
+            g.company.budget = 80;
+            g.employees = [1];
+            g.vehicles = [];
+
+            for (var i = 1; i <= 10; i++) {
+                it('should decrement budget by 8. i = ' + i, () => {
+                    assert.equal(g.company.budget - g.company.WAGE, g.budgetAfterRound());
+                });
+            }
         });
     });
 
