@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-/** i am commenting **/
-(function()
-{
-=======
-(function(){
->>>>>>> refs/remotes/Jchang4/master
+
+(function() {
     "use strict"
     id = [0,0,0,0];
-    function Company(name, budget, numEmployees) 
+    function Company(name, budget, numEmployees)
 	{
         // Set Company Information
         if (name == null || name == undefined) this.name = "Logistics Company, Inc.";
@@ -21,7 +16,7 @@
         else this.numEmployees = numEmployees;
 
         // Set Company Variables
-        this.vehicles = 
+        this.vehicles =
 		{
             "bicycle": [],
             "truck": [],
@@ -32,13 +27,28 @@
         // Constant Variables
         this.WAGE = 8;
     }
-	
+
 	// Add a new vehicle to Company class
 	Company.prototype.AddVehicle = function AddVehicle(type, vehicle)
 	{
 		this.vehicles[type].push(vehicle);
 	}
-	
+
+    /* The amount of money spent on X per day.
+            Type              Cost
+        --------------      --------
+           employees          $8/hr
+           vehicles          $15/hr
+    */
+    Company.prototype.dailyExpense = function dailyExpense()
+    {
+        // NOTE: Later, charge different amounts for different vehicles
+        return ((this.WAGE * this.employees.length) +
+                (15 * this.vehicles.length));
+    }
+
+    
+
 	function Vehicle(TilesPerTurn,Capacity,GasPrice,TilesPerGallon,Range,Type)
 	{
 		// Set vehicle static variables
@@ -52,31 +62,18 @@
         else this.TilesPerGallon = TilesPerGallon;
 		if (Range == null || Range == undefined) this.Range = 0;
         else this.Range = Range;
-		
+
 		// Set vehicle ID and increment global ID
 		this.ID = id[type];
 		id[type]++;
-		
+
 	}
-	
+
 	// Returns the cost for that vehicle if a certain distance is travelled
 	Vehicle.prototype.TotalCost = function TotalCost(TilesTravelled)
 	{
 		return TilesTravelled * this.GasPrice * this.TilesPerGallon;
 	}
-
-    /* The amount of money spent on X per day.
-            Type              Cost
-        --------------      --------
-           employees          $8/hr
-           vehicles          $15/hr
-    */
-    Company.prototype.dailyExpense = function dailyExpense() 
-	{
-        // NOTE: Later, charge different amounts for different vehicles
-        return ((this.WAGE * this.employees.length) +
-                (15 * this.vehicles.length));
-    }
 
     module.exports = Company;
 })();
