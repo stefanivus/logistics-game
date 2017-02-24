@@ -5,12 +5,11 @@
 
     describe('Map', function() {
         describe('#isAlive()', () => {
-            var Map = new Map();
-            var g = new Game();
+            // var g = new Game();
+            var map = new Map();
 
-            it('should return true when budget = 75000', () => {
-                g.company.budget = 75000;
-                assert.equal(true, g.isAlive());
+            it('should return 10x10 grid', () => {
+                assert.equal(100, map.grid.length);
             });
         });
     });

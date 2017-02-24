@@ -1,7 +1,7 @@
 (function(){
     "use strict"
 
-    var Company = require("./company");
+    var Company = require("../company");
 
     /*
         Game Environment
@@ -34,9 +34,8 @@
 
 
         // Game Settings (Constants)
-        this.BUDGET_THRESHOLD = 0; // Lose is budget < threshold
-        this.COST_GAS = 2.55; // $ per gallon
-        
+        this.BUDGET_THRESHOLD = 0; // Lose if budget < threshold
+        this.GAS_CONSTANT = 255; // price per gallon
     }
     //Game.prototype.FUNCTIONNAME = function FUNCTIONNAME() {}
 
