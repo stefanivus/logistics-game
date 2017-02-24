@@ -17,7 +17,7 @@
                 1. Company's budget is recalculated
                     (subtract wages and vehicle costs)
                 2. Increment Deliveries
-                
+
     */
 
     function Game(companyName, budget, numStartingEmployees, numStartingClients) {
@@ -29,30 +29,41 @@
         // -------------------------------------
 
         // Initialize Environment
-        this.round = 1;
-        this.clients = [];
+        this.turn = 1;
+        this.clients = []; // array of client objects
+
+
+        // Game Settings (Constants)
+        this.BUDGET_THRESHOLD = 0; // Lose if budget == 0
+
     }
     //Game.prototype.FUNCTIONNAME = function FUNCTIONNAME() {}
 
     Game.prototype.nextRound = function nextRound() {
         if (!this.isAlive()) return false; // GAME OVER
         else {
-            this.round++;
+            this.turn++;
             this.company.budget = this.budgetAfterRound();
         }
     }
 
-    // NOTE GO CLIENT BY CLIENT AND DECREASE BASED ON SHIPMENTS
-    Game.prototype.budgetAfterRound = function budgetAfterRound() {
-        return this.company.budget - this.company.dailyExpense();
+    Game.prototype.checkBudget = function checkBudget() {
+        return this.company.budget > this.BUDGET_THRESHOLD;
     }
 
-    Game.prototype.loadClients = function loadClients(clients) {
+    // // NOTE GO CLIENT BY CLIENT AND DECREASE BASED ON SHIPMENTS
+    // Game.prototype.budgetAfterRound = function budgetAfterRound() {
+    //     return this.company.budget - this.company.dailyExpense();
+    // }
+    //
+    // Game.prototype.loadClients = function loadClients(clients) {
+    //
+    // }
 
-    }
-
+    /* Check what the budget will be when the round ends */
     Game.prototype.isAlive = function isAlive() {
-        return this.budgetAfterRound() > -100000;
+
+        return false;
     }
 
     module.exports = Game;

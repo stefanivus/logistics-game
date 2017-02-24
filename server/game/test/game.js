@@ -3,7 +3,7 @@
     var Game = require("../game");
 
     describe('Game', function() {
-        describe('#isAlive()', function() {
+        describe('#isAlive()', () => {
             var g = new Game();
             g.employees = [1];
             g.vehicles = [];
@@ -41,7 +41,7 @@
             });
         });
 
-        describe('#nextRound()', function() {
+        describe('#nextRound()', () => {
             var g = new Game();
             g.company.budget = 99999999; // make sure we have enough money
 
@@ -73,5 +73,5 @@
             }
         });
     });
-    
+
 })();
