@@ -1,14 +1,9 @@
 
 1. The Client
-    Properties:
-        happinessMeter
-        products
-        deliverySchedule
+    happinessMeter
+        - determines chance of leaving you each round
 
-    Specifications:
-        Happiness Meter: (determines chance of leaving you each round)
-
-            Mood            Chance of Leaving you           Reason
+            Mood            Chance of Leaving You           Reason
         ---------------------------------------------------------------------------
             Happy                   0%               Deliveries ahead of time
             Neutral                 10%              Deliveries occasionally late
@@ -16,48 +11,112 @@
             Mad                     90%              Deliveries usually late or
                                                      never arrive
 
-        NOTE: Successful deliveries bring in extra happiness or sadness.
-            * Early deliveries get bonus happiness
-            * On-time deliveries do nothing or give
-              a static happiness bonus (i.e. +1)
-            * Late deliveries incur a penalty
-            * Very Late deliveries make the client angry
+         NOTE: Successful deliveries bring in extra happiness or sadness.
+             * Early deliveries get bonus happiness
+             * On-time deliveries do nothing or give
+               a static happiness bonus (i.e. +1)
+             * Late deliveries incur a penalty
+             * Very Late deliveries make the client angry
 
-        Products: (array of product objects)
+     products
+        - array of product objects
 
-        deliverySchedule: (when deliveries need to be made)
-            * Priority Queue of product deliveries
-            * map to products via "id" or "product name"
+     deliverySchedule
+        - when deliveries need to be made
+        - Priority Queue of product deliveries
+        - map to products via "id" or "product name"
+
+
+
+
+
+
+
+
 
 
 
 2. Product
-    Properties:
-        name
-        weight
+    name
+        - i.e. "Blue Socks", "Awesome medicine"
+    weight
+        - static weight (kg)
 
-    Specifications
-        name:
-            i.e. "Blue Socks", "Awesome medicine"
 
-        weight:
-            static variable weighing 1pk (1 package - our unit of weight)
+
+
+
+
+
+
+
+
+
 
 
 3. Company
-    Properties:
-        WAGE
-        numEmployees
-        vehicles
+    WAGE
+        - static wage paid to all employees
 
-    Specifications:
-        WAGE: static wage paid to all employees
+    numEmployees
+        - number of employees
 
-        numEmployees: number of employees
+    vehicles
+        - container for all company vehicles
 
-        vehicles: container for all company vehicles
+    employeeCost()
+        - cost of employees (wage x numEmployees)
 
-        
+    fuelCost()
+        - cost of each vehicle based on distance they traveled
+
+    totalCost()
+        - sum of all round costs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4. Vehicle
+    WEIGHT_CAPACITY
+        - static number of weight that can carry
+
+    SPEED
+
+    Company:
+     Employees:
+         -number
+     Products:
+         -amount
+         -weight
+     Vehicles:
+         static=
+             -speed
+             -capacity
+             -inate cost
+             -range
+
+         dynamic=
+             -has driver
+             -load
+             -full cost = inate cost*load
+
+
+
+
+
+
+
+
 
 
 
