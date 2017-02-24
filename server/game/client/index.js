@@ -24,13 +24,9 @@
 
     //Client.prototype.setNextShipment = function setNextShipment() {}
 
-    Client.prototype.getNextShipment = function setNextShipment() {
+    Client.prototype.getNextShipment = function setNextShipment() {}
 
-    }
-
-    Client.prototype.setNextShipment = function setNextShipment() {
-
-    }
+    Client.prototype.setNextShipment = function setNextShipment() {}
 
     module.exports = Client;
 })();

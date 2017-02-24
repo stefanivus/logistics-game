@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 /** i am commenting **/
 (function()
 {
+=======
+(function(){
+>>>>>>> refs/remotes/Jchang4/master
     "use strict"
     id = [0,0,0,0];
     function Company(name, budget, numEmployees) 
