@@ -1,0 +1,104 @@
+
+1. The Client
+    Properties:
+        happinessMeter
+        products
+        deliverySchedule
+
+    Specifications:
+        Happiness Meter: (determines chance of leaving you each round)
+
+            Mood            Chance of Leaving you           Reason
+        ---------------------------------------------------------------------------
+            Happy                   0%               Deliveries ahead of time
+            Neutral                 10%              Deliveries occasionally late
+            Annoyed                 65%              Deliveries usually late
+            Mad                     90%              Deliveries usually late or
+                                                     never arrive
+
+        NOTE: Successful deliveries bring in extra happiness or sadness.
+            * Early deliveries get bonus happiness
+            * On-time deliveries do nothing or give
+              a static happiness bonus (i.e. +1)
+            * Late deliveries incur a penalty
+            * Very Late deliveries make the client angry
+
+        Products: (array of product objects)
+
+        deliverySchedule: (when deliveries need to be made)
+            * Priority Queue of product deliveries
+            * map to products via "id" or "product name"
+
+
+
+2. Product
+    Properties:
+        name
+        weight
+
+    Specifications
+        name:
+            i.e. "Blue Socks", "Awesome medicine"
+
+        weight:
+            static variable weighing 1pk (1 package - our unit of weight)
+
+
+3. Company
+    Properties:
+        WAGE
+        numEmployees
+        vehicles
+
+    Specifications:
+        WAGE: static wage paid to all employees
+
+        numEmployees: number of employees
+
+        vehicles: container for all company vehicles
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Future Stuff:
+
+        The Company
+==========================
+2. Package
+    Weight (kg)
+
+3. Employees
+    a) general employee
+        - basic wage
+        - basic delivery speeds
+    b) awesome employee
+        - higher wage
+        - faster delivery speeds
+        - or can carry more packages
+    c) crappy employee
+        - lower wage
+        - crappy delivery speeds

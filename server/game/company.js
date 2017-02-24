@@ -17,8 +17,12 @@
         else this.numEmployees = numEmployees;
 
         // Set Company Variables
-        this.vehicles = [];
-        this.plannedShipments = []; // priority queue
+        this.vehicles = {
+            bicycle: [],
+            trucks: [],
+            train: [],
+            plane: []
+        };
 
         // Constant Variables
         this.WAGE = 8;

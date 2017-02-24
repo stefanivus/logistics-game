@@ -19,7 +19,14 @@ Game
 
                 1. Descriptions of Pieces
                 2. How objects fit together
-                3.
+                3. 
+
+
+
+
+
+
+
 
 
 
@@ -42,6 +49,7 @@ Game
 
     As the Logistics Manager, you will have to be in charge
     of your clients happiness and your company's budget.
+
         * The client's happiness is determined by how
            soon deliveries can be made.
 
@@ -49,11 +57,18 @@ Game
           based on the number of employees and vehicle
           fuel/maintenance costs.
 
+
+    To win each round you will have to make sure your budget is
+    above -$100,000 or you risk foreclosure.
+
+
     The levels become harder by having to manage more
     cities in the same amount of time. In harder levels,
     the Logistics Manager will have to send packages via
     plane or train; and then determine how to send out
     the packages locally.
+
+
 
 
 ----------------------------------------------------------------
@@ -95,12 +110,24 @@ Game
         Mad      =>  * too many late deliveries
                      * 90% chance of leaving you
 
+     Successful deliveries bring in extra happiness or sadness.
+         * Early deliveries get bonus happiness
+         * On-time deliveries do nothing or give
+           a static happiness bonus (i.e. +1)
+         * Late deliveries incur a penalty
+         * Very Late deliveries make the client angry
+
+
 ----------------------------------------------------------------
 
                             Company
 
     The Logistic Company is the way the User interacts with
-    the game.
+    the game.The User will have to manage the happiness of
+    clients and delivery schedules.
+
+
+
 
 ----------------------------------------------------------------
 
