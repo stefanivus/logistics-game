@@ -1,6 +1,6 @@
 (function() {
     var assert = require('assert'),
-        Game = require("../game"),
+        Game = require("../environment"),
         Client = require('../client');
 
     /*

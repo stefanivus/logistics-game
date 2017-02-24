@@ -20,7 +20,7 @@
 
     */
 
-    function Game(companyName, budget, numStartingEmployees, numStartingClients) {
+    function Game(companyName, budget, numStartingEmployees/*, numStartingClients*/) {
         this.company = new Company(companyName, budget);
 
         // -------------------------------------
@@ -34,16 +34,20 @@
 
 
         // Game Settings (Constants)
-        this.BUDGET_THRESHOLD = 0; // Lose if budget == 0
-
+        this.BUDGET_THRESHOLD = 0; // Lose is budget < threshold
+        this.COST_GAS = 2.55; // $ per gallon
+        
     }
     //Game.prototype.FUNCTIONNAME = function FUNCTIONNAME() {}
 
     Game.prototype.nextRound = function nextRound() {
-        if (!this.isAlive()) return false; // GAME OVER
-        else {
+        if (!this.isAlive()) {
+            return false; // GAME OVER
+
+        } else {
             this.turn++;
-            this.company.budget = this.budgetAfterRound();
+            // Subtract Employee Wages from Budget
+            // Subtract Gas Costs from Budget
         }
     }
 
@@ -55,14 +59,13 @@
     // Game.prototype.budgetAfterRound = function budgetAfterRound() {
     //     return this.company.budget - this.company.dailyExpense();
     // }
-    //
+
     // Game.prototype.loadClients = function loadClients(clients) {
     //
     // }
 
     /* Check what the budget will be when the round ends */
     Game.prototype.isAlive = function isAlive() {
-
         return false;
     }
 

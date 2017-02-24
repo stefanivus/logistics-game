@@ -1,6 +1,6 @@
 (function() {
     var assert = require('assert');
-    var Game = require("../game");
+    var Game = require("../environment");
 
     describe('Game', function() {
         describe('#isAlive()', () => {

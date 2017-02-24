@@ -18,7 +18,7 @@
         // Production Levels
         this.speedMultiplier;
         this.capacityMultiplier;
-        
+
     }
 
     module.exports = Employee;
