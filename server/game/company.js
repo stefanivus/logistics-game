@@ -47,7 +47,7 @@
                 (15 * this.vehicles.length));
     }
 
-    
+
 
 	function Vehicle(TilesPerTurn,Capacity,GasPrice,TilesPerGallon,Range,Type)
 	{
