@@ -1,9 +1,9 @@
 (function(){
 
-    function Map() {
+    function Map(numDropZones) {
         this.N = 10;
         this.grid = [];
-
+        this.dropZones = [];
 
         // Creates 10x10 grid
         for (var i = 0; i < (this.N * this.N); i++)
@@ -14,7 +14,8 @@
         // Place Random Base Camp
     }
 
-    Map.prototype.placeRandomDropzones = function placeRandomDropzones() {
+    /* Place X random drop zones */
+    Map.prototype.placeRandomDropzones = function placeRandomDropzones(numZones) {
 
     }
 
