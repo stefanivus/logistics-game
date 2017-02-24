@@ -1,12 +1,7 @@
-# Logistics Game!
 
-Game
-    ## User Input
-    company
 
-    ## Automatically Updated
-    Map
-    Clients
+
+
 
 
 
@@ -15,7 +10,18 @@ Game
 
                 1. Descriptions of Pieces
                 2. How objects fit together
-                3. 
+                3.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -85,3 +91,7 @@ Game
                      * 90% chance of leaving you
 
 ----------------------------------------------------------------
+                            Company
+
+    The Logistic Company is the way the User interacts with
+    the game.
