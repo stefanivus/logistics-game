@@ -1,17 +1,58 @@
 (function(){
 
     function Map() {
-        // Creates 10x10 grid
+        this.N = 10;
         this.grid = [];
-        for (var i = 0; i < 10*10; i++)
+
+
+        // Creates 10x10 grid
+        for (var i = 0; i < (this.N * this.N); i++)
             this.grid[i] = 0;
 
+        // Place Random Drop Zones
+
+        // Place Random Base Camp
+    }
+
+    Map.prototype.placeRandomDropzones = function placeRandomDropzones() {
 
     }
 
-    Map.prototype.placeRandomDropzones() = function placeRandomDropzones() {
-        
+    Map.prototype.placeRandomBaseCamp = function placeRandomBaseCamp() {
+
     }
 
-    module.exports = Map;
+    /* Turn (row, col) into an index.
+        Row and Col must be in range [1, N]
+
+     */
+    Map.prototype.getGridIndex = function getGridIndex(row, col) {
+        if (row < 1 || row > this.N)
+            throw new Error("Row is out of bounds.");
+        if (col < 1 || col > this.N)
+            throw new Error("Row is out of bounds.");
+
+        return (row * this.N) + this.col - 1;
+    }
+
+    Map.prototype.printGrid = function printGrid() {
+        var defaultString = "    ";
+        var stringBuilder = defaultString;
+
+        for (var i = 0; i < this.grid.length; i++) {
+            if (i % this.N == 0) {
+                console.log(stringBuilder);
+                stringBuilder = defaultString;
+            }
+            else stringBuilder += (this.grid[i] + " ");
+        }
+    }
+
+
+
+
+    var m = new Map();
+    m.printGrid();
+
+    //module.exports = Map;
 })();

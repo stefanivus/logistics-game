@@ -4,8 +4,12 @@
     var Game = require("../environment");
 
     describe('Map', function() {
-        describe('#isAlive()', () => {
-            // var g = new Game();
+        describe('#getGridIndex()', () => {
+            it('should return 10x10 grid', () => {
+                assert.equal(100, map.grid.length);
+            });
+        });
+        describe('#getGridIndex()', () => {
             var map = new Map();
 
             it('should return 10x10 grid', () => {
