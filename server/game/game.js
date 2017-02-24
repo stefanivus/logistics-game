@@ -3,19 +3,17 @@
 
     var Company = require("./company");
 
-    function Game(companyName, budget/*, numStartingEmployees, numStartingClients*/) {
+    function Game(companyName, budget, numStartingEmployees, numStartingClients) {
         this.company = new Company(companyName, budget);
-
 
         // -------------------------------------
         // NOTE Remove later. Used to end loop.
         this.company.employees = [1];
         // -------------------------------------
 
-
-
         // Initialize Environment
         this.round = 1;
+        this.clients = [];
     }
     //Game.prototype.FUNCTIONNAME = function FUNCTIONNAME() {}
 
@@ -30,6 +28,10 @@
     // NOTE GO CLIENT BY CLIENT AND DECREASE BASED ON SHIPMENTS
     Game.prototype.budgetAfterRound = function budgetAfterRound() {
         return this.company.budget - this.company.dailyExpense();
+    }
+
+    Game.prototype.loadClients = function loadClients(clients) {
+
     }
 
     Game.prototype.isAlive = function isAlive() {

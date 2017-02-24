@@ -1,7 +1,8 @@
 (function(){
     "use strict"
 
-    function Company(name, budget, employees) {
+    function Company(name, budget, numEmployees) {
+        // Set Company Information
         if (name == null || name == undefined)
              this.name = "Logistics Company, Inc.";
         else this.name = name;
@@ -11,14 +12,12 @@
              this.budget = 75000;
         else this.budget = budget;
 
-        if (employees == null || employees == undefined ||
-            employees.length == 0 || !Array.isArray(employees))
-             this.employees = [];
-        else this.employees = employees;
+        if (numEmployees == null || numEmployees == undefined)
+             this.numEmployees = 1;
+        else this.numEmployees = numEmployees;
 
         // Set Company Variables
         this.vehicles = [];
-        this.clients = [];
         this.plannedShipments = []; // priority queue
 
         // Constant Variables
