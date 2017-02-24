@@ -1,3 +1,12 @@
+# Logistics Game!
+
+Game
+    ## User Input
+    company
+
+    ## Automatically Updated
+    Map
+    Clients
 
 
 
@@ -11,9 +20,6 @@
                 1. Descriptions of Pieces
                 2. How objects fit together
                 3.
-
-
-
 
 
 
@@ -54,16 +60,15 @@
 
                             Map
 
-    This map of the city is a N x N grid marked with
-    specific locations where deliveries can be made.
-    The delivery trucks will have to pick the best
-    routes so as to save time and gas.
+    This map of the city is a N x N grid marked with specific
+    locations where deliveries can be made.
+    The delivery trucks will have to pick the best routes so
+    as to save time and gas.
 
-    As rounds get harder the maps will be bigger and
-    the user will have to manage sending products to
-    different locations via trains/planes, then picking
-    the best local delivery methods to get them to desired
-    locations.
+    As rounds get harder the maps will be bigger and the user
+    will have to manage sending products to different locations
+    via trains/planes, then picking the best local delivery
+    methods to get them to desired locations.
 
 ----------------------------------------------------------------
 
@@ -91,7 +96,36 @@
                      * 90% chance of leaving you
 
 ----------------------------------------------------------------
+
                             Company
 
     The Logistic Company is the way the User interacts with
     the game.
+
+----------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  2. How objects fit together
+----------------------------------------------------------------
+    There are two main groups: User Input and Automated.
+
+    All the automated classes are those evaluated at the end
+    of each round. When a round ends, we must re-calculate
+    the Logistics Company's budget, and increment the deliveries
+    by X amount.
+
+    Once deliveries are made, we update the Clients' happiness
+    and other parameters.
+
+----------------------------------------------------------------
