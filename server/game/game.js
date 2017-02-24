@@ -3,6 +3,23 @@
 
     var Company = require("./company");
 
+    /*
+        Game Environment
+
+        Properties:
+            - company
+            - clients => all the current clients
+            - round
+            -
+
+        Round System:
+            - Every round the game environment is recalculated.
+                1. Company's budget is recalculated
+                    (subtract wages and vehicle costs)
+                2. Increment Deliveries
+                
+    */
+
     function Game(companyName, budget, numStartingEmployees, numStartingClients) {
         this.company = new Company(companyName, budget);
 

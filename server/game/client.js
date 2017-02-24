@@ -19,7 +19,7 @@
         else this.products = products;
 
         // Set Shipment Information
-        this.nextShipment = false;
+        this.shipments = [];
     }
 
     //Client.prototype.setNextShipment = function setNextShipment() {}
