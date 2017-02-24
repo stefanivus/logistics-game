@@ -1,10 +1,11 @@
 (function() {
+    var path = require('path');
     var webpack = require('webpack');
 
     var config = {
-        context: __dirname + '/src', // `__dirname` is root of project and `src` is source
+        context: __dirname + '/app', // `__dirname` is root of project and `src` is source
         entry: {
-            app: './app/index.jsx',
+            app: './index.jsx',
         },
         output: {
             path: __dirname + '/dist', // `dist` is the destination
@@ -13,10 +14,10 @@
         module: {
           rules: [
               {
-                  test: /\.js$/, //Check for all js files
+                  test: /\.js?x$/, //Check for all js and jsx files
                   use: [{
                       loader: 'babel-loader',
-                      options: { presets: ['es2015'] }
+                      options: { presets: ['es2015', 'react'] }
                   }]
               },
               {
@@ -32,12 +33,22 @@
                    loader: "json-loader"  //JSON loader
                }
            ]
-       },
-       devServer: {
-           open: true, // to open the local server in browser
-           contentBase: __dirname + '/src',
-       },
-       devtool: "eval-source-map" // Default development sourcemap
+        },
+        plugins: [
+            new webpack.optimize.CommonsChunkPlugin({
+                name: 'commons',
+                filename: 'commons.js',
+                minChunks: 2,
+            })
+        ],
+        devServer: {
+            open: true, // to open the local server in browser
+            contentBase: path.resolve(__dirname, '/index.html'),
+        },
+        devtool: "eval-source-map", // Default development sourcemap
+        resolve: {
+            extensions: ['.js', '.jsx']
+        }
     };
 
     if (process.env.NODE_ENV === "production") {
