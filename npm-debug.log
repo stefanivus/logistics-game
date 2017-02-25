@@ -1,0 +1,23 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node/7.6.0/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'update',
+1 verbose cli   'npm',
+1 verbose cli   '-g' ]
+2 info using npm@4.1.2
+3 info using node@v7.6.0
+4 verbose stack Error: ENOENT: no such file or directory, lstat '/Users/justinchang/npm/lib'
+5 verbose cwd /Users/justinchang/Desktop/logistics-game
+6 error Darwin 15.6.0
+7 error argv "/usr/local/Cellar/node/7.6.0/bin/node" "/usr/local/bin/npm" "update" "npm" "-g"
+8 error node v7.6.0
+9 error npm  v4.1.2
+10 error path /Users/justinchang/npm/lib
+11 error code ENOENT
+12 error errno -2
+13 error syscall lstat
+14 error enoent ENOENT: no such file or directory, lstat '/Users/justinchang/npm/lib'
+15 error enoent ENOENT: no such file or directory, lstat '/Users/justinchang/npm/lib'
+15 error enoent This is most likely not a problem with npm itself
+15 error enoent and is related to npm not being able to find a file.
+16 verbose exit [ -2, true ]
