@@ -1,9 +1,10 @@
 (function() {
     "use strict"
 
-    var path = require('path');
+    const path = require('path');
     const webpack = require('webpack');
-    var ExtractTextPlugin = require('extract-text-webpack-plugin');
+    const HTMLWebpackPlugin = require('html-webpack-plugin');
+    const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
     var config = {
         context: __dirname + '/app', // `__dirname` is root of project and `src` is source
@@ -69,6 +70,11 @@
                 filename: 'commons.js',
                 minChunks: 2,
             }),
+
+            // new webpack.optimize.UglifyJsPlugin({
+            //     sourceMap: config.devtool && (config.devtool.indexOf("sourcemap") >= 0 || config.devtool.indexOf("source-map") >= 0)
+            // }),
+
             new ExtractTextPlugin('styles.css'),
 
             // enable HMR globally
