@@ -1,0 +1,30 @@
+Company:
+ static=
+ -location[x,y]
+ dynamic=
+ -budget
+ -employees
+
+ Vehicles:
+     static=
+     -speed
+     -capacity
+     -inate cost
+     -range
+     
+     dynamic=
+     -has driver
+     -load
+     -location[x,y]
+     -route[[]]
+     -destination[x,y]
+     
+     functions=
+     -Availability()
+     -SetDriver()
+     -Deploy(route, destination)
+     -Move()
+     
+          
+    
+
